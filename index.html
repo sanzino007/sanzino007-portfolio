@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sandeep Singh · Portfolio</title>
+  <meta name="description" content="Portfolio of Sandeep Singh — Software Developer specialized in JS/Node/Vue and ML/AI projects." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    // Tailwind config (optional extra colors)
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50:'#eff6ff', 100:'#dbeafe', 200:'#bfdbfe', 300:'#93c5fd', 400:'#60a5fa', 500:'#3b82f6', 600:'#2563eb', 700:'#1d4ed8', 800:'#1e40af', 900:'#1e3a8a'
+            }
+          },
+          boxShadow: { glow: '0 10px 40px rgba(59,130,246,0.25)' }
+        }
+      }
+    }
+  </script>
+  <style>
+    :root { --ring: 0 0 0 4px rgba(59, 130, 246, .25); }
+    body { font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, sans-serif; }
+  </style>
+  <!-- SEO & Social -->
+  <meta property="og:title" content="Sandeep Singh · Portfolio" />
+  <meta property="og:description" content="Software Developer — Vue.js, Node.js, Python/ML. Building delightful products." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="/og-image.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Sandeep Singh",
+      "url": "https://your-domain.vercel.app/",
+      "jobTitle": "Software Developer",
+      "knowsAbout": ["JavaScript", "Vue.js", "Node.js", "Python", "Machine Learning", "Networking"],
+      "sameAs": ["https://github.com/yourhandle", "https://www.linkedin.com/in/yourhandle/"]
+    }
+  </script>
+</head>
+<body class="bg-white text-slate-900 dark:bg-slate-950 dark:text-slate-100">
+  <!-- Nav -->
+  <header class="sticky top-0 z-50 backdrop-blur bg-white/70 dark:bg-slate-950/70 border-b border-slate-200/60 dark:border-slate-800">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+      <a href="#home" class="font-extrabold tracking-tight text-xl">Sandeep<span class="text-brand-600">.</span></a>
+      <nav class="hidden md:flex gap-6 text-sm font-medium">
+        <a href="#projects" class="hover:text-brand-600">Projects</a>
+        <a href="#experience" class="hover:text-brand-600">Experience</a>
+        <a href="#skills" class="hover:text-brand-600">Skills</a>
+        <a href="#contact" class="hover:text-brand-600">Contact</a>
+        <a href="/resume.pdf" class="inline-flex items-center rounded-lg border border-slate-300 dark:border-slate-700 px-3 py-1.5 hover:shadow-glow">Resume</a>
+      </nav>
+      <div class="flex items-center gap-2">
+        <button id="themeToggle" class="p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800" aria-label="Toggle theme">
+          <svg id="iconSun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 hidden"><path d="M12 18a6 6 0 100-12 6 6 0 000 12z"/><path fill-rule="evenodd" d="M12 2.25a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0V3A.75.75 0 0112 2.25zm0 17.25a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0V20a.75.75 0 01.75-.75zM4.72 4.72a.75.75 0 011.06 0l1.06 1.06a.75.75 0 11-1.06 1.06L4.72 5.78a.75.75 0 010-1.06zm12.44 12.44a.75.75 0 011.06 0l1.06 1.06a.75.75 0 11-1.06 1.06l-1.06-1.06a.75.75 0 010-1.06zM2.25 12a.75.75 0 01.75-.75h1.5a.75.75 0 010 1.5H3A.75.75 0 012.25 12zm17.25 0a.75.75 0 01.75-.75h1.5a.75.75 0 010 1.5H20a.75.75 0 01-.75-.75zM4.72 19.28a.75.75 0 001.06 0l1.06-1.06a.75.75 0 10-1.06-1.06L4.72 18.22a.75.75 0 000 1.06zm12.44-12.44a.75.75 0 001.06 0l1.06-1.06a.75.75 0 10-1.06-1.06l-1.06 1.06a.75.75 0 000 1.06z" clip-rule="evenodd"/></svg>
+          <svg id="iconMoon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5"><path d="M21.752 15.002A9 9 0 1111.998 2.25a.75.75 0 01.82.977 7.5 7.5 0 009.957 9.957.75.75 0 01.977.818z"/></svg>
+        </button>
+        <button class="md:hidden p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800" id="menuBtn" aria-label="Open menu">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6"><path fill-rule="evenodd" d="M3.75 5.25a.75.75 0 01.75-.75h15a.75.75 0 010 1.5h-15a.75.75 0 01-.75-.75zm0 6.75a.75.75 0 01.75-.75h15a.75.75 0 010 1.5h-15a.75.75 0 01-.75-.75zm0 6.75a.75.75 0 01.75-.75h15a.75.75 0 010 1.5h-15a.75.75 0 01-.75-.75z" clip-rule="evenodd"/></svg>
+        </button>
+      </div>
+    </div>
+    <div id="mobileMenu" class="md:hidden hidden border-t border-slate-200 dark:border-slate-800">
+      <nav class="px-4 py-3 flex flex-col gap-3 text-sm">
+        <a href="#projects" class="hover:text-brand-600">Projects</a>
+        <a href="#experience" class="hover:text-brand-600">Experience</a>
+        <a href="#skills" class="hover:text-brand-600">Skills</a>
+        <a href="#contact" class="hover:text-brand-600">Contact</a>
+        <a href="/resume.pdf" class="inline-flex items-center rounded-lg border border-slate-300 dark:border-slate-700 px-3 py-1.5">Resume</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section id="home" class="relative overflow-hidden">
+    <div aria-hidden class="absolute inset-0 bg-[radial-gradient(60rem_60rem_at_120%_-10%,rgba(59,130,246,0.20),transparent_50%)]"></div>
+    <div class="max-w-6xl mx-auto px-4 py-24 md:py-28 grid md:grid-cols-2 gap-10 items-center">
+      <div>
+        <p class="text-sm uppercase tracking-widest text-brand-600 font-semibold">Hello, I'm</p>
+        <h1 class="mt-2 text-4xl md:text-6xl font-extrabold leading-tight">Sandeep Singh</h1>
+        <p class="mt-4 text-lg text-slate-600 dark:text-slate-300">Full‑stack developer (Vue.js, Node.js) with interests in ML/AI and system design. I build fast, accessible, and delightful web apps.</p>
+        <div class="mt-6 flex flex-wrap gap-3">
+          <a href="#projects" class="inline-flex items-center gap-2 rounded-xl bg-brand-600 text-white px-5 py-3 font-semibold shadow-glow">View Projects</a>
+          <a href="mailto:you@example.com" class="inline-flex items-center gap-2 rounded-xl border border-slate-300 dark:border-slate-700 px-5 py-3 font-semibold">Contact Me</a>
+        </div>
+        <div class="mt-6 flex items-center gap-4 text-slate-500">
+          <a href="https://github.com/yourhandle" class="hover:text-brand-600" aria-label="GitHub">GitHub</a>
+          <a href="https://www.linkedin.com/in/yourhandle/" class="hover:text-brand-600" aria-label="LinkedIn">LinkedIn</a>
+          <a href="https://x.com/yourhandle" class="hover:text-brand-600" aria-label="Twitter">X</a>
+        </div>
+      </div>
+      <div class="relative">
+        <div class="aspect-square rounded-3xl border border-slate-200 dark:border-slate-800 p-2 bg-gradient-to-br from-white to-slate-50 dark:from-slate-900 dark:to-slate-950">
+          <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1200&auto=format&fit=crop" alt="Developer at desk" class="w-full h-full object-cover rounded-2xl" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="py-20 border-t border-slate-200 dark:border-slate-800">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="flex items-end justify-between mb-8">
+        <h2 class="text-3xl md:text-4xl font-extrabold">Featured Projects</h2>
+        <a href="https://github.com/yourhandle" class="text-brand-600 font-semibold">See all →</a>
+      </div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Card 1 -->
+        <article class="group rounded-2xl border border-slate-200 dark:border-slate-800 overflow-hidden hover:shadow-xl transition-shadow">
+          <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=1200&auto=format&fit=crop" alt="E‑commerce dashboard" class="h-44 w-full object-cover">
+          <div class="p-5">
+            <h3 class="font-bold text-lg">Game & PC Shop (Vue + Node)</h3>
+            <p class="mt-1 text-sm text-slate-600 dark:text-slate-300">Full‑stack storefront for games and PC parts with secure checkout and admin panel.</p>
+            <ul class="mt-3 flex flex-wrap gap-2 text-xs">
+              <li class="px-2.5 py-1 rounded-full bg-slate-100 dark:bg-slate-800">Vue</li>
+              <li class="px-2.5 py-1 rounded-full bg-slate-100 dark:bg-slate-800">Node</li>
+              <li class="px-2.5 py-1 rounded-full bg-slate-100 dark:bg-slate-800">MongoDB</li>
+            </ul>
+            <div class="mt-4 flex gap-3 text-sm">
+              <a href="#" class="font-semibold hover:text-brand-600">Live</a>
+              <a href="#" class="font-semibold hover:text-brand-600">Code</a>
+            </div>
+          </div>
+        </article>
+        <!-- Card 2 -->
+        <article class="group rounded-2xl border border-slate-200 dark:border-slate-800 overflow-hidden hover:shadow-xl transition-shadow">
+          <img src="https://images.unsplash.com/photo-1454165205744-3b78555e5572?q=80&w=1200&auto=format&fit=crop" alt="Node chat app" class="h-44 w-full object-cover">
+          <div class="p-5">
+            <h3 class="font-bold text-lg">Secure Chat (Node + Socket.IO)</h3>
+            <p class="mt-1 text-sm text-slate-600 dark:text-slate-300">JWT auth, OTP via Twilio, E2E messaging (AES + Diffie‑Hellman), and tests.</p>
+            <ul class="mt-3 flex flex-wrap gap-2 text-xs">
+              <li class="px-2.5 py-1 rounded-full bg-slate-100 dark:bg-slate-800">Node</li>
+              <li class="px-2.5 py-1 rounded-full bg-slate-100 dark:bg-slate-800">Socket.IO</li>
+              <li class="px-2.5 py-1 rounded-full bg-slate-100 dark:bg-slate-800">JWT</li>
+            </ul>
+            <div class="mt-4 flex gap-3 text-sm">
+              <a href="#" class="font-semibold hover:text-brand-600">Live</a>
+              <a href="#" class="font-semibold hover:text-brand-600">Code</a>
+            </div>
+          </div>
+        </article>
+        <!-- Card 3 -->
+        <article class="group rounded-2xl border border-slate-200 dark:border-slate-800 overflow-hidden hover:shadow-xl transition-shadow">
+          <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=1200&auto=format&fit=crop" alt="ML project" class="h-44 w-full object-cover">
+          <div class="p-5">
+            <h3 class="font-bold text-lg">Stock Price Predictor (ML)</h3>
+            <p class="mt-1 text-sm text-slate-600 dark:text-slate-300">Feature engineering, LSTM/Prophet baselines, and backtesting toolkit.</p>
+            <ul class="mt-3 flex flex-wrap gap-2 text-xs">
+              <li class="px-2.5 py-1 rounded-full bg-slate-100 dark:bg-slate-800">Python</li>
+              <li class="px-2.5 py-1 rounded-full bg-slate-100 dark:bg-slate-800">Pandas</li>
+              <li class="px-2.5 py-1 rounded-full bg-slate-100 dark:bg-slate-800">TensorFlow</li>
+            </ul>
+            <div class="mt-4 flex gap-3 text-sm">
+              <a href="#" class="font-semibold hover:text-brand-600">Live</a>
+              <a href="#" class="font-semibold hover:text-brand-600">Code</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience -->
+  <section id="experience" class="py-20">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-3xl md:text-4xl font-extrabold mb-8">Experience</h2>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="rounded-2xl border border-slate-200 dark:border-slate-800 p-6">
+          <div class="flex items-center justify-between">
+            <h3 class="font-bold">Freelance Projects</h3>
+            <span class="text-sm text-slate-500">2023 — Present</span>
+          </div>
+          <ul class="mt-3 list-disc pl-5 space-y-1 text-sm text-slate-700 dark:text-slate-300">
+            <li>Built responsive Vue apps and dashboards with REST/GraphQL backends.</li>
+            <li>Designed Node APIs with JWT, role-based access, and testing.</li>
+            <li>Optimized performance (Lighthouse 95+, Core Web Vitals pass).</li>
+          </ul>
+        </div>
+        <div class="rounded-2xl border border-slate-200 dark:border-slate-800 p-6">
+          <div class="flex items-center justify-between">
+            <h3 class="font-bold">Open Source</h3>
+            <span class="text-sm text-slate-500">Ongoing</span>
+          </div>
+          <ul class="mt-3 list-disc pl-5 space-y-1 text-sm text-slate-700 dark:text-slate-300">
+            <li>Maintainer/contributor to Node utilities and Vue components.</li>
+            <li>Wrote docs, examples, and CI pipelines.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="py-20 border-y border-slate-200 dark:border-slate-800 bg-slate-50/40 dark:bg-slate-900/30">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-3xl md:text-4xl font-extrabold mb-8">Skills</h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 text-sm">
+        <div class="rounded-xl border border-slate-200 dark:border-slate-800 p-5">
+          <h3 class="font-semibold mb-2">Frontend</h3>
+          <p>HTML, CSS, Tailwind, JavaScript, Vue.js, React</p>
+        </div>
+        <div class="rounded-xl border border-slate-200 dark:border-slate-800 p-5">
+          <h3 class="font-semibold mb-2">Backend</h3>
+          <p>Node.js, Express, REST, GraphQL, JWT, WebSockets</p>
+        </div>
+        <div class="rounded-xl border border-slate-200 dark:border-slate-800 p-5">
+          <h3 class="font-semibold mb-2">Data/ML</h3>
+          <p>Python, Pandas, TensorFlow, scikit‑learn</p>
+        </div>
+        <div class="rounded-xl border border-slate-200 dark:border-slate-800 p-5">
+          <h3 class="font-semibold mb-2">Tools</h3>
+          <p>Git/GitHub, Docker, Vercel, CI/CD, Testing</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-20">
+    <div class="max-w-3xl mx-auto px-4">
+      <h2 class="text-3xl md:text-4xl font-extrabold mb-6">Contact</h2>
+      <p class="text-slate-600 dark:text-slate-300">Want to collaborate or have an opportunity? Reach out!</p>
+      <form class="mt-6 grid gap-4" action="mailto:you@example.com" method="post" enctype="text/plain">
+        <input required name="name" placeholder="Your name" class="w-full rounded-xl border border-slate-300 dark:border-slate-700 bg-white/70 dark:bg-slate-900/70 px-4 py-3 outline-none focus:ring-[var(--ring)]" />
+        <input required type="email" name="email" placeholder="Your email" class="w-full rounded-xl border border-slate-300 dark:border-slate-700 bg-white/70 dark:bg-slate-900/70 px-4 py-3 outline-none focus:ring-[var(--ring)]" />
+        <textarea required name="message" placeholder="Your message" rows="5" class="w-full rounded-xl border border-slate-300 dark:border-slate-700 bg-white/70 dark:bg-slate-900/70 px-4 py-3 outline-none focus:ring-[var(--ring)]"></textarea>
+        <button class="justify-self-start inline-flex items-center gap-2 rounded-xl bg-brand-600 text-white px-5 py-3 font-semibold shadow-glow">Send</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-10 border-t border-slate-200 dark:border-slate-800">
+    <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-slate-500">
+      <p>© <span id="year"></span> Sandeep Singh. All rights reserved.</p>
+      <div class="flex items-center gap-4">
+        <a href="#home" class="hover:text-brand-600">Back to top ↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Theme toggle with localStorage
+    const root = document.documentElement;
+    const themeToggle = document.getElementById('themeToggle');
+    const iconSun = document.getElementById('iconSun');
+    const iconMoon = document.getElementById('iconMoon');
+
+    function applyTheme(theme){
+      if(theme === 'dark'){ root.classList.add('dark'); iconMoon.classList.add('hidden'); iconSun.classList.remove('hidden'); }
+      else { root.classList.remove('dark'); iconSun.classList.add('hidden'); iconMoon.classList.remove('hidden'); }
+    }
+    const saved = localStorage.getItem('theme');
+    const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    applyTheme(saved ?? (systemPrefersDark ? 'dark' : 'light'));
+    themeToggle.addEventListener('click', ()=>{
+      const isDark = root.classList.toggle('dark');
+      localStorage.setItem('theme', isDark ? 'dark' : 'light');
+      applyTheme(isDark ? 'dark' : 'light');
+    });
+
+    // Mobile menu
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    menuBtn.addEventListener('click', ()=> mobileMenu.classList.toggle('hidden'));
+
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
